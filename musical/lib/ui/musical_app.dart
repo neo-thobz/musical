@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:musical/ui/widgets/curved_bottom_navigation.dart';
+import 'package:musical/ui/widgets/hamburger_menu.dart';
 
 class MyHomePage extends StatefulWidget {
   MyHomePage({Key key, this.title}) : super(key: key);
@@ -17,6 +18,7 @@ class _MyHomePageState extends State<MyHomePage> {
       appBar: AppBar(
         title: Text(widget.title),
       ),
+      drawer: HamburgerMenu(),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
