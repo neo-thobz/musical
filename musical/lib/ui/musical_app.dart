@@ -49,20 +49,13 @@ class _MyHomePageState extends State<MyHomePage> {
       bottomNavigationBar:
           BlocBuilder<BottomNavigationBloc, BottomNavigationState>(
               builder: (BuildContext context, BottomNavigationState state) {
-        return BottomNavigationBar(
+        return CurvedNavigation(
           currentIndex: bottomNavigationBloc.currentIndex,
-          items: const <BottomNavigationBarItem>[
-            BottomNavigationBarItem(
-              icon: Icon(Icons.home, color: Colors.black),
-              title: Text('First'),
+          buttonTapped: (index) => bottomNavigationBloc.add(
+            PageTapped(
+              pageIndex: index,
             ),
-            BottomNavigationBarItem(
-              icon: Icon(Icons.all_inclusive, color: Colors.black),
-              title: Text('Second'),
-            ),
-          ],
-          onTap: (index) =>
-              bottomNavigationBloc.add(PageTapped(pageIndex: index)),
+          ),
         );
       }),
     ); //CurvedNavigation(),
