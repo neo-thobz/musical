@@ -6,6 +6,8 @@ import 'package:musical/ui/music_library/music_library_screen.dart';
 import 'package:musical/ui/widgets/curved_bottom_navigation.dart';
 import 'package:musical/ui/widgets/hamburger_menu.dart';
 
+import '../blocs/botton_navigation_bloc/bottom_navigation_bloc.dart';
+
 class MyHomePage extends StatefulWidget {
   MyHomePage({Key key, this.title}) : super(key: key);
 
@@ -31,11 +33,16 @@ class _MyHomePageState extends State<MyHomePage> {
           if (state is PageLoading) {
             return Center(child: CircularProgressIndicator());
           }
-          if (state is FirstPageLoaded) {
+          if (state is HomePageLoaded) {
             return HomeScreen(text: state.text);
           }
-          if (state is SecondPageLoaded) {
+          if (state is MusicLibraryLoaded) {
             return MusicLibraryScreen(number: state.number);
+          }
+          if (state is ThirdPageLoaded) {
+            return Center(
+              child: Text(state.greeting),
+            );
           }
           return Container(
             child: Center(

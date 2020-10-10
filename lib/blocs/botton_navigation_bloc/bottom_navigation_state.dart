@@ -23,19 +23,19 @@ class PageLoading extends BottomNavigationState {
   String toString() => 'PageLoading';
 }
 
-class FirstPageLoaded extends BottomNavigationState {
+class HomePageLoaded extends BottomNavigationState {
   final String text;
 
-  FirstPageLoaded({@required this.text});
+  HomePageLoaded({@required this.text});
 
   @override
   String toString() => 'FirstPageLoaded with text: $text';
 }
 
-class SecondPageLoaded extends BottomNavigationState {
+class MusicLibraryLoaded extends BottomNavigationState {
   final int number;
 
-  SecondPageLoaded({@required this.number});
+  MusicLibraryLoaded({@required this.number});
 
   @override
   String toString() => 'SecondPageLoaded with number: $number';
