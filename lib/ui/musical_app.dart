@@ -67,9 +67,4 @@ class _MyHomePageState extends State<MyHomePage> {
       }),
     ); //CurvedNavigation(),
   }
-
-  @override
-  void dispose() {
-    super.dispose();
-  }
 }
