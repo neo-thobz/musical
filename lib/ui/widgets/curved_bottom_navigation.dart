@@ -3,7 +3,7 @@ import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 
 class CurvedNavigation extends StatelessWidget {
   final int currentIndex;
-  final Function buttonTapped;
+  final void Function(int) buttonTapped;
 
   const CurvedNavigation({this.currentIndex, this.buttonTapped});
 
@@ -31,9 +31,7 @@ class CurvedNavigation extends StatelessWidget {
       index: currentIndex,
       animationCurve: Curves.elasticInOut,
       animationDuration: Duration(milliseconds: 500),
-      onTap: (value) => {
-        buttonTapped.call(value),
-      },
+      onTap: buttonTapped,
     );
   }
 }
