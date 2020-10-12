@@ -29,6 +29,7 @@ dependencies:
   equatable: ^1.2.5
   flutter_bloc: ^6.0.6
   meta: ^1.1.8
+  music_player: ^0.1.5
 
 dev_dependencies:
   flutter_test:
