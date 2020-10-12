@@ -12,17 +12,22 @@ class CurvedNavigation extends StatelessWidget {
     return CurvedNavigationBar(
       items: <Widget>[
         Icon(
-          Icons.verified_user,
+          Icons.home,
           size: 20.0,
           color: Colors.black,
         ),
         Icon(
-          Icons.add,
+          Icons.library_music,
           size: 20.0,
           color: Colors.black,
         ),
         Icon(
-          Icons.list,
+          Icons.radio,
+          size: 20.0,
+          color: Colors.black,
+        ),
+        Icon(
+          Icons.search,
           size: 20.0,
           color: Colors.black,
         ),
